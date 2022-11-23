@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Understanding TypeScript</title>
+  <script src="dist/app.js" defer></script>
+</head>
+<body>
+<section>
+  <div style="display: block; margin: 20px">
+  <div style="align-content: center; color:blue; font-weight:700; margin: 10px">Image resolution</div>
+  <img src="src/images/resolution_1920x1080.jpg"
+       alt="responsive_image"
+       srcset="src/images/resolution_800x600@0.5x.jpg 0.5x,
+       src/images/resolution_1920x1080.jpg 1x,
+       src/images/resolution_2560x1080@2x.jpg 2x"
+  >
+  </div>
+
+  <div style="display: block; margin: 20px">
+  <div style="align-content: center; color:blue; font-weight:700; margin: 10px">Image width</div>
+  <img src="src/images/resolution_1920x1080.jpg"
+       alt="responsive_image"
+       srcset="src/images/resolution_800x600@0.5x.jpg 500w,
+       src/images/resolution_1920x1080.jpg 1000w,
+       src/images/resolution_2560x1080@2x.jpg 1500w"
+       >
+  </div>
+
+  <div style="display: block; margin: 20px">
+  <div style="align-content: center; color:blue; font-weight:700; margin: 10px">Specifying size</div>
+  <img src="src/images/resolution_1920x1080.jpg"
+       alt="responsive_image"
+       srcset="src/images/resolution_800x600@0.5x.jpg 500w,
+       src/images/resolution_1920x1080.jpg 1000w,
+       src/images/resolution_2560x1080@2x.jpg 1500w" sizes="20vw"
+  >
+  </div>
+
+  <div style="display: block; margin: 20px">
+  <div style="align-content: center; color:blue; font-weight:700; margin: 10px">Picture source</div>
+  <picture>
+    <source media="(min-width: 500px)" srcset="src/images/picture_png.png" type="image/png">
+    <source  media="(min-width: 1000px)" srcset="src/images/picture_gif.gif" type="image/gif">
+    <img src="src/images/resolution_1920x1080.jpg" alt="img_in_picture">
+  </picture>
+  </div>
+
+  <div style="display: block; margin: 20px">
+    <div style="align-content: center; color:blue; font-weight:700; margin: 10px">Picture media</div>
+    <picture>
+      <img src="src/images/stew-w_1400.jpg"
+           alt="img_in_picture"
+           sizes="(max-width: 1400px) 100vw, 1400px"
+           srcset="src/images/stew-w_200.jpg 200w,
+           src/images/stew-w_769.jpg 769w,
+           src/images/stew-w_1204.jpg 1204w,
+           src/images/stew-w_1400.jpg 1400w"
+           >
+    </picture>
+  </div>
+
+</section>
+
+</body>
+</html>

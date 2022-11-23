@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Understanding TypeScript</title>
+  <script src="dist/app.js" defer></script>
+</head>
+<body>
+<section>
+  <div style="display: block; margin: 20px">
+  <div style="align-content: center; color:blue; font-weight:700; margin: 10px">Image with pixel densities</div>
+  <img src="src/images/stew2x@2x.jpg"
+       alt="responsive_image"
+       srcset="src/images/stew2x@2x.jpg 2x,
+       src/images/two_ducks1x.jpg"
+  >
+  </div>
+
+  <div style="align-content: center; color:blue; font-weight:700; margin: 10px">Device pixel ratio</div>
+  <img src="src/images/small_duck400px.jpg"
+       alt="responsive_image"
+       srcset="src/images/small_duck400px.jpg 1x,
+       src/images/small_duck800px.jpg 2x,
+       src/images/small_duck1400px.jpg 3x,
+       src/images/small_duck400px.jpg 4x"
+  >
+  </div>
+
+  <div style="align-content: center; color:blue; font-weight:700; margin: 10px">With descriptor</div>
+  <img src="src/images/small_duck400px.jpg"
+       alt="responsive_image"
+       srcset="src/images/small_duck400px.jpg 400w,
+       src/images/small_duck800px.jpg 800w,
+       src/images/small_duck1400px.jpg 1400w"
+  >
+  </div>
+
+  <div style="align-content: center; color:blue; font-weight:700; margin: 10px">Specifying size</div>
+  <img src="src/images/small_duck400px.jpg"
+       alt="responsive_image"
+       srcset="src/images/small_duck400px.jpg 400w,
+       src/images/small_duck800px.jpg 800w,
+       src/images/small_duck1400px.jpg 1400w" sizes="50vw"
+  >
+
+  <div style="align-content: center; color:blue; font-weight:700; margin: 10px">Picture source</div>
+  <picture>
+    <source media="(min-width: 500px)" srcset="src/images/duck_png.png" type="image/png">
+    <source  media="(min-width: 1000px)" srcset="src/images/duck-hello.gif" type="image/gif">
+    <source  media="(min-width: 1400px)" srcset="src/images/duck_draw.webp" type="image/webp">
+    <img src="src/images/duck_png.png" alt="img_in_picture">
+  </picture>
+  </div>
+
+</section>
+
+</body>
+</html>
